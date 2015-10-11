@@ -1,0 +1,21 @@
+{
+  "name": "AuthManager",
+  "version": "1.0.0",
+  "description": "Gestion de l'authentification",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "gogs@pakilow.eu:pakito/authmanager.git"
+  },
+  "author": "Benjamin Humeau",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.14.1",
+    "express": "^4.13.3",
+    "mustache-express": "^1.2.1",
+    "pg": "^4.4.2"
+  }
+}
