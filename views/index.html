@@ -1,8 +1,42 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>{{title}}</title>
+    <title>Authentification</title>
+    <link rel="icon" type="image/png" href="/img/favicon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.1/css/materialize.min.css">
+    <link rel="stylesheet" href="/css/main.css">
 </head>
 <body>
-    <h1>{{title}}</h1>
+    <div class="row strankaregistrace">
+        <div class="col m12">
+            <div class="row">
+                <div class="col l6">
+                    <a href="http://diskforyou.com/">
+                        <h1>Authentification</h1>
+                    </a>
+                </div>
+            </div>
+            <div class="col center">
+                <div class="registracni-formular z-depth-3 col l8 m9 s12">
+                    <form action="/" autocomplete="off" method="POST">
+                        <div class="input-field col s12">
+                            <i class="mdi-action-account-circle prefix"></i>
+                            <input type="email" name="email" id="email" maxlength="30" required="">
+                            <label for="email">Adresse e-mail</label>
+                        </div>
+                        <div class="input-field col s12">
+                            <i class="mdi-communication-vpn-key prefix"></i>
+                            <input type="password" name="password" id="password" maxlength="30" required="">
+                            <label for="heslo">Mot de passe</label>
+                        </div>
+                        <div class="center-btn">
+                            <button type="submit" class="waves-effect waves-light btn" id="registrovatse"><i class="mdi-action-done left"></i>Connexion</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js" async></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.1/js/materialize.min.js" async></script>
 </body>
