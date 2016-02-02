@@ -1,23 +1,26 @@
-la petite config : server {
-            listen 80 default_server;
-                    server_name test.pakitow.eu;
+Beta config :
 
-                            index index.html;
-                                    auth_request /auth;
-                                            error_page 401 = @login;
+```
+server {
+    listen 80 default_server;
+    server_name test.domain.tld;
+    index index.html;
 
-                                                    location / {
-                                                                        root /srv/html/;
-                                                                                }
+    auth_request /auth;
+    error_page 401 = @login;
 
-                                                                                        location /auth {
-                                                                                                            rewrite /auth /$1 break;
-                                                                                                                            proxy_pass http://127.0.0.1:1337;
-                                                                                                                                            proxy_redirect off;
-                                                                                                                                                            proxy_set_header Host $host;
-                                                                                                                                                                    }
-
-                                                                                                                                                                            location @login {
-                                                                                                                                                                                                rewrite ^.* http://auth.pakilow.eu;
-                                                                                                                                                                                                        }
+    location / {
+        root /srv/html/;
+    }
+    
+    location /auth {
+        rewrite /auth /$1 break;
+        proxy_pass http://127.0.0.1:1337;
+        proxy_redirect off;
+        proxy_set_header Host $host;
+    }
+    
+    location @login {                                                               rewrite ^.* http://auth.domain.tld;
+    }
 }
+```
