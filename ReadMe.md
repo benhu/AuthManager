@@ -1,3 +1,6 @@
+Authentification manager for Nginx
+==
+
 Beta config :
 
 ```
