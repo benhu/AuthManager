@@ -20,7 +20,8 @@ server {
         proxy_set_header Host $host;
     }
     
-    location @login {                                                               rewrite ^.* http://auth.domain.tld;
+    location @login {
+        rewrite ^.* http://auth.domain.tld;
     }
 }
 ```
