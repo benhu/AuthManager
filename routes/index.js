@@ -3,7 +3,8 @@ var mysql   = require('mysql'),
     config  = require('../config.js');
 
 exports.index = function(req, res){
-    res.render('index');
+    res.sendStatus(401);
+    //res.render('index');
 };
 
 exports.auth = function(req, res) {

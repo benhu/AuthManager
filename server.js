@@ -19,7 +19,6 @@ app.use(express.static(__dirname + '/public'));
 
 //Routes
 app.get('/', routes.index);
-app.post('/', routes.auth);
 
 //Launch server
 app.listen(config.web.port, function(){
